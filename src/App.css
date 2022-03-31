@@ -4,12 +4,13 @@
   --highlight-color: hsl(0, 100%, 95%);
   --var-color: hsl(0, 0%, 40%);
   --small-padding: 10px;
-  --block-size: 1rem;
-  --unit: 7rem;
-  --margin-unit: 0.2rem;
+  --block-size: 0.1rem;
+  --unit: 1.75rem;
+  --margin-unit: 0.5rem;
 }
 
 .container {
+  /* min-width: 200%; */
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   background-color: var(--bg-color);
@@ -24,7 +25,7 @@
     'lt tt rt'
     'lm mm rm';
 
-  grid-template-columns: 1fr 3fr 0fr;
+  grid-template-columns: 4fr 22fr 0fr;
 }
 .grid-top {
   grid-area: 'tt';
@@ -44,7 +45,7 @@
   flex-direction: row;
   /* margin: var(--margin-unit); */
   margin: 0;
-  background-color: #d8ffc0;
+  /* background-color: #d8ffc0; */
 }
 
 .yearBlock {
@@ -54,6 +55,7 @@
   width: var(--unit);
   height: var(--unit);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .name {
@@ -71,3 +73,32 @@
 .years {
   display: flex;
 }
+
+.year{
+  margin: 0 var(--margin-unit) 0 calc(var(--margin-unit)*1 );
+  width: var(--unit);
+  height: var(--unit);
+}
+
+.blockArtist {
+  width:calc(var(--unit)/7*0.8);
+  height:calc(var(--unit)/7*0.8);
+  margin: calc(var(--unit)/7*0.1);
+  background-color: red;
+}
+
+.blockNoInfo {
+  width:calc(var(--unit)/7*0.8);
+  height:calc(var(--unit)/7*0.8);
+  margin: calc(var(--unit)/7*0.1);
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.blockEmpty {
+  width:calc(var(--unit)/7*0.8);
+  height:calc(var(--unit)/7*0.8);
+  margin: calc(var(--unit)/7*0.1);
+  background-color: rgba(128, 128, 128, 0.3);
+  /* background-color: blue; */
+}
+

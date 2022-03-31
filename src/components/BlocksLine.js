@@ -1,4 +1,5 @@
 import React from 'react'
+import YearBlock from './YearBlock'
 
 export default function BlocksLine(props) {
     const { values } = props
@@ -7,12 +8,9 @@ export default function BlocksLine(props) {
 
         {values.map((value) => {
             return (
-                <div className='yearBlock'>
-                   {(typeof value === 'number' && value > 0) ?
-                    new Array(value).fill('').map((e) => <p>x</p>)
-                    : (value === 0 ? <p>zero</p> :
-                        <p className="noData"> n/a </p>)}
-                </div>
+                
+                  <YearBlock value={value}/>
+                
             )
         })}
         </div>

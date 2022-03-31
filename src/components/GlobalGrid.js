@@ -20,7 +20,7 @@ export default function GlobalGrid(props) {
         <div className='grid'>
             <p></p>
             <div className='grid-top' style={{display: "flex", margin: 'none'}} >
-                {Array(20).fill('').map((e, i) => <p  >{2000 + i}</p>)}
+                {Array(22).fill('').map((e, i) => <p className='year'>{2000 + i}</p>)}
             </div>
             <p></p>
             <div className='grid-left' >
