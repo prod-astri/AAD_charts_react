@@ -1,83 +1,73 @@
 :root {
-  --main-color: #c3efff;
-  --second-color: rgb(10, 19, 40);
-  --highlight-color: rgb(100, 20, 100);
-  --var-color: rgb(100, 100, 20);
+  --bg-color: hsl(46, 100%, 95%);
+  --second-color: #d8ffc0;
+  --highlight-color: hsl(0, 100%, 95%);
+  --var-color: hsl(0, 0%, 40%);
   --small-padding: 10px;
   --block-size: 1rem;
+  --unit: 7rem;
+  --margin-unit: 0.2rem;
 }
 
-svg {
-  /* fill: rgb(200, 100, 200); */
-  width: 2.4rem;
-  margin: 20px;
-}
-
-.home {
-  background-color: var(--second-color);
-  color: var(--main-color);
-  border: var(--small-padding) solid var(--main-color);
+.container {
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
-}
-
-.flexing {
+  background-color: var(--bg-color);
+  border: 0.1rem solid black;
+  margin: var(--block-size);
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  /* justify-content: center */
-}
-.column {
   flex-direction: column;
 }
+.grid {
+  display: grid;
+  grid-template-areas:
+    'lt tt rt'
+    'lm mm rm';
 
-.row {
+  grid-template-columns: 1fr 3fr 0fr;
+}
+.grid-top {
+  grid-area: 'tt';
+}
+.grid-left {
+  grid-area: 'lm';
+}
+.grid-right {
+  grid-area: 'rm';
+}
+.grid-middle {
+  grid-area: 'mm';
+}
+
+.blocksLine {
+  display: flex;
   flex-direction: row;
+  /* margin: var(--margin-unit); */
+  margin: 0;
+  background-color: #d8ffc0;
 }
 
-.baseline {
-  align-items: baseline;
+.yearBlock {
+  
+  border: 0.1rem solid black;
+  margin: var(--margin-unit);
+  width: var(--unit);
+  height: var(--unit);
+  display: flex;
 }
 
-.thirtypercentWidth {
-  width: 50%;
+.name {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--unit);
+  /* margin: var(--margin-unit) var(--margin-unit) var(--margin-unit) var(--margin-unit); */
+  border: 0.1rem solid black;
+  margin-top: var(--margin-unit);
+  margin-bottom: calc(2 * var(--margin-unit));
 }
 
-.block {
-  min-width: var(--block-size);
-  width: var(--block-size);
-  height: var(--block-size);
-  display: block;
-  background-color: aliceblue;
-  margin: 0.1rem;
-  border-radius: calc(0.3 * var(--block-size));
-}
-
-.exhibitsBlocks {
-  background-color: var(--main-color);
-}
-
-.text-left {
-  text-align: left;
-}
-
-.placesNames {
-  max-width: 20%;
-  min-width: 20%;
-  min-height: 2rem;
-  background-color: var(--highlight-color);
-}
-
-.yearBox {
-  background-color: var(--highlight-color);
-  margin: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 0.3rem;
-
-  /* padding-right: 0.3rem; */
-
-  border-radius: calc(0.3 * var(--block-size));
-}
-
-.globalLine > *{
-  margin: 0px
+.years {
+  display: flex;
 }

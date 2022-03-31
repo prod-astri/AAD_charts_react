@@ -1,0 +1,86 @@
+:root {
+  --main-color: #c3efff;
+  --second-color: rgb(10, 19, 40);
+  --highlight-color: rgb(100, 20, 100);
+  --var-color: rgb(100, 100, 20);
+  --small-padding: 10px;
+  --block-size: 1rem;
+}
+
+/* HOMEPAGE */
+svg {
+  /* fill: rgb(200, 100, 200); */
+  width: 2.4rem;
+  margin: 20px;
+}
+
+.home {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  border: var(--small-padding) solid var(--main-color);
+  text-align: center;
+}
+
+.flexing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center */
+}
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.thirtypercentWidth {
+  width: 50%;
+}
+
+.block {
+  min-width: var(--block-size);
+  width: var(--block-size);
+  height: var(--block-size);
+  display: block;
+  background-color: aliceblue;
+  margin: 0.1rem;
+  border-radius: calc(0.3 * var(--block-size));
+}
+
+.exhibitsBlocks {
+  background-color: var(--main-color);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.placesNames {
+  max-width: 20%;
+  min-width: 20%;
+  min-height: 2rem;
+  background-color: var(--highlight-color);
+}
+
+.yearBox {
+  background-color: var(--highlight-color);
+  margin: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.3rem;
+
+  /* padding-right: 0.3rem; */
+
+  border-radius: calc(0.3 * var(--block-size));
+}
+
+.globalLine > *{
+  margin: 0px
+}
+
+/* HOMEPAGE */
