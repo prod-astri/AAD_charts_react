@@ -32,41 +32,52 @@ svg {
 
 .row {
   flex-direction: row;
-  
 }
 
-.baseline{
+.baseline {
   align-items: baseline;
 }
 
 .thirtypercentWidth {
-  width: 50%
+  width: 50%;
 }
 
 .block {
   min-width: var(--block-size);
+  width: var(--block-size);
   height: var(--block-size);
-  display:block;
+  display: block;
   background-color: aliceblue;
   margin: 0.1rem;
-  border-radius: calc(0.3 * var(--block-size));;
+  border-radius: calc(0.3 * var(--block-size));
 }
 
 .exhibitsBlocks {
   background-color: var(--main-color);
 }
 
-.text-left{
+.text-left {
   text-align: left;
 }
 
-.yearBox{
+.placesNames {
+  max-width: 20%;
+  min-width: 20%;
+  min-height: 2rem;
+  background-color: var(--highlight-color);
+}
+
+.yearBox {
   background-color: var(--highlight-color);
   margin: 0.3rem;
   padding-bottom: 0.3rem;
   padding-left: 0.3rem;
-  
+
   /* padding-right: 0.3rem; */
 
-  border-radius: calc(0.3 * var(--block-size));;
+  border-radius: calc(0.3 * var(--block-size));
+}
+
+.globalLine > *{
+  margin: 0px
 }

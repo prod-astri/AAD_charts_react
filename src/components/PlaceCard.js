@@ -10,14 +10,14 @@ export default function PlaceCard(props) {
         yearsWithAADAmount,
         yearsWithDataAmount } = place;
 
-    function makeBlock(kind) {
-        return <div className={'block ' + kind}></div>
-    }
+        function makeBlock(kind, i) {
+            return <div className={'block ' + kind} key={i}></div>
+        }
 
     function placeBlocks(amount, kind) {
         let list = []
         for (let i = 0; i < amount; i++) {
-            list.push(makeBlock(kind))
+            list.push(makeBlock(kind, i))
         }
         return <div className='flexing'>{list}</div>
     }
