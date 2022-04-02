@@ -1,24 +1,29 @@
 :root {
-  --bg-color: hsl(46, 100%, 95%);
-  --second-color: #d8ffc0;
-  --highlight-color: hsl(0, 100%, 95%);
-  --var-color: hsl(0, 0%, 40%);
+  --color-one: rgb(89, 77, 21);
+  --color-two: rgb(139, 110, 33);
+  --color-three: rgb(216, 176, 71);
+  --color-four: rgb(128, 52, 47);
+  --color-four-transp: rgba(128, 52, 47, 0.3);
+  --color-five: rgb(13, 13, 13);
   --small-padding: 10px;
   --block-size: 0.1rem;
-  --unit: 1.75rem;
-  --margin-unit: 0.5rem;
+  --unit: 3.5rem;
+  --margin-unit: 0rem;
+  --little-border: 0.001rem
 }
 
 .container {
   /* min-width: 200%; */
+  color: var(--color-three);
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  background-color: var(--bg-color);
-  border: 0.1rem solid black;
+  background-color: var(--color-four);
+  border: 0.1rem solid var(--color-five);
   margin: var(--block-size);
   display: flex;
   flex-direction: column;
 }
+
 .grid {
   display: grid;
   grid-template-areas:
@@ -27,6 +32,7 @@
 
   grid-template-columns: 4fr 22fr 0fr;
 }
+
 .grid-top {
   grid-area: 'tt';
 }
@@ -49,8 +55,8 @@
 }
 
 .yearBlock {
-  
-  border: 0.1rem solid black;
+  background-color: var(--color-five);
+  border: var(--little-border) solid var(--color-four);
   margin: var(--margin-unit);
   width: var(--unit);
   height: var(--unit);
@@ -59,13 +65,13 @@
 }
 
 .name {
-  background-color: white;
+  background-color: var(--color-);
   display: flex;
   align-items: center;
   justify-content: center;
   height: var(--unit);
   /* margin: var(--margin-unit) var(--margin-unit) var(--margin-unit) var(--margin-unit); */
-  border: 0.1rem solid black;
+  border:var(--little-border) solid #00000022;
   margin-top: var(--margin-unit);
   margin-bottom: calc(2 * var(--margin-unit));
 }
@@ -74,31 +80,35 @@
   display: flex;
 }
 
-.year{
-  margin: 0 var(--margin-unit) 0 calc(var(--margin-unit)*1 );
+.year {
+  margin-left: calc(var(--margin-unit) + var(--little-border));
+  margin-right: calc(var(--margin-unit) + var(--little-border));
+  /* margin-left: calc(var(--margin-unit) + var(--little-border)); */
+  margin-top: 0;
+  /* margin-right: calc(var(--margin-unit) + var(--little-border)); */
+  margin-bottom: 0;
   width: var(--unit);
   height: var(--unit);
 }
 
 .blockArtist {
-  width:calc(var(--unit)/7*0.8);
-  height:calc(var(--unit)/7*0.8);
-  margin: calc(var(--unit)/7*0.1);
-  background-color: red;
+  width: calc(var(--unit) / 7 * 0.8);
+  height: calc(var(--unit) / 7 * 0.8);
+  margin: calc(var(--unit) / 7 * 0.1);
+  background-color: var(--color-three);
 }
 
 .blockNoInfo {
-  width:calc(var(--unit)/7*0.8);
-  height:calc(var(--unit)/7*0.8);
-  margin: calc(var(--unit)/7*0.1);
-  background-color: rgba(128, 128, 128, 0.1);
+  width: calc(var(--unit) / 7 * 0.8);
+  height: calc(var(--unit) / 7 * 0.8);
+  margin: calc(var(--unit) / 7 * 0.1);
+  background-color: var(--color-four-transp)
 }
 
 .blockEmpty {
-  width:calc(var(--unit)/7*0.8);
-  height:calc(var(--unit)/7*0.8);
-  margin: calc(var(--unit)/7*0.1);
-  background-color: rgba(128, 128, 128, 0.3);
+  width: calc(var(--unit) / 7 * 0.8);
+  height: calc(var(--unit) / 7 * 0.8);
+  margin: calc(var(--unit) / 7 * 0.1);
+  background-color: rgba(128, 128, 128, 0);
   /* background-color: blue; */
 }
-
